@@ -1,4 +1,4 @@
-#Fri Jul 05 21:52:17 PDT 2019
+#Wed Jul 24 15:30:50 PDT 2019
 base.0=C\:\\Personal\\Temp\\parseproject\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.1=classes2.dex
 renamed.1=classes2.dex

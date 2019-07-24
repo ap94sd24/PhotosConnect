@@ -4,7 +4,7 @@
             "outputFile": "C:\\Personal\\Temp\\parseproject\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\f1a95a084a3f60a187f3037f37b70a52\\res\\values-v11\\values-v11.xml",
+                    "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\ba583744fdc0240639fea9f1d3eef227\\res\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2,8,14,20,26,32,38,39,43,47,48,52,56,57,61,66,71,76,78,80,81,82,136,191",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\855589728eabebf91c79c564c3d92b0f\\res\\values-v11\\values.xml",
+                    "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\91d6b5292a3dc9c6536102144287ff48\\res\\values-v11\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
