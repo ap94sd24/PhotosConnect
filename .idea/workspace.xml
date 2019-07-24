@@ -57,7 +57,10 @@
     <last-search-timestamp>1562379820092</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0910c2c7-42bf-4b57-a6af-dd362dc992ce" name="Default" comment="" />
+    <list default="true" id="0910c2c7-42bf-4b57-a6af-dd362dc992ce" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/StarterApplication.java" afterDir="false" />
+    </list>
     <ignored path="Parse-Server-Starter-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/StarterApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="149">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -132,6 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -145,7 +149,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +372,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22516556" />
       <window_info id="Structure" order="1" weight="0.24907063" />
@@ -392,12 +394,11 @@
       <window_info anchor="bottom" id="Android Monitor" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.23058398" side_tool="true" weight="0.32958803" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33082706" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32957393" />
       <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.76941603" weight="0.2908864" />
+      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.76941603" weight="0.29197994" />
       <window_info anchor="bottom" id="Android Profiler" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="15" weight="0.29837704" />
-      <window_info anchor="right" id="Assistant" weight="0.32992172" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,6 +409,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="9" side_tool="true" />
+      <window_info anchor="right" id="Assistant" order="10" weight="0.32992172" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -445,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/StarterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="149">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>
