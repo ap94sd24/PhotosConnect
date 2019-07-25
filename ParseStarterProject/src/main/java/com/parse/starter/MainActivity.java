@@ -25,6 +25,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 
 import java.util.List;
 
@@ -99,6 +100,47 @@ public class MainActivity extends AppCompatActivity {
            }
        }
    }); */
+
+      /**
+       * Sign up new user
+       */
+ /* ParseUser user = new ParseUser();
+  user.setUsername("nick");
+  user.setPassword("password");
+
+  user.signUpInBackground(new SignUpCallback() {
+      @Override
+      public void done(ParseException e) {
+          if ( e == null) {
+              Log.i("Sign up status", "Success");
+          } else {
+              e.printStackTrace();
+          }
+      }
+  }); */
+
+
+      /**
+       * Login user
+       */
+  /*ParseUser.logInInBackground("nick", "password", new LogInCallback() {
+      @Override
+      public void done(ParseUser user, ParseException e) {
+          if (user != null) {
+              Log.i("Success", "Logged in!");
+          } else {
+              e.printStackTrace();
+          }
+      }
+  }); */
+
+  ParseUser.logOut();
+
+  if (ParseUser.getCurrentUser() != null) {
+      Log.i("Signed in", ParseUser.getCurrentUser().getUsername());
+  } else {
+      Log.i("User status", "User not signed in!");
+  }
 
 
 

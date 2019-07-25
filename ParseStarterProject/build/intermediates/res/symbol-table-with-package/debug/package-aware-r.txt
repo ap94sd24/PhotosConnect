@@ -835,6 +835,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable photos
 drawable places_ic_clear
 drawable places_ic_search
 drawable powered_by_google_dark
@@ -918,6 +919,7 @@ id beginning
 id book_now
 id bottom
 id button
+id button2
 id buttonPanel
 id button_0
 id button_1
@@ -966,6 +968,8 @@ id disableHome
 id disconnect
 id donate_with
 id donate_with_google
+id editText2
+id editText3
 id edit_query
 id email
 id end
@@ -990,6 +994,7 @@ id icon_uri
 id icon_view
 id ifRoom
 id image
+id imageView2
 id index_entity_types
 id info
 id instant_message
