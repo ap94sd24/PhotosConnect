@@ -2112,6 +2112,10 @@
         "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\ba583744fdc0240639fea9f1d3eef227\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
+        "merged": "C:\\Personal\\Temp\\parseproject\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable_my_gradient_drawable.xml.flat",
+        "source": "C:\\Personal\\Temp\\parseproject\\Parse-Server-Starter-Project\\ParseStarterProject\\src\\main\\res\\drawable\\my_gradient_drawable.xml"
+    },
+    {
         "merged": "C:\\Personal\\Temp\\parseproject\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_plus_signin_btn_icon_dark_normal.9.png.flat",
         "source": "C:\\Users\\Adam Pan\\.gradle\\caches\\transforms-2\\files-2.1\\1b5157253c6d6b4ef03f7847215882a9\\res\\drawable-mdpi-v4\\common_plus_signin_btn_icon_dark_normal.9.png"
     },

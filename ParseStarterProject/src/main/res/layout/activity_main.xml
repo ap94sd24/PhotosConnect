@@ -11,12 +11,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFB300"
+    android:background="@drawable/my_gradient_drawable"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -27,7 +28,7 @@
         app:srcCompat="@drawable/photos" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/userNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
@@ -37,23 +38,27 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/userNameEditText"
         android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/passwordEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
+        android:background="@android:color/holo_orange_light"
+        android:capitalize="words"
         android:hapticFeedbackEnabled="true"
-        android:text="Sign In" />
+        android:onClick="signUp"
+        android:text="Sign up"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
