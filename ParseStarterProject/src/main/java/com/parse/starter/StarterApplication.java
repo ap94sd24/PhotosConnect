@@ -48,7 +48,7 @@ public class StarterApplication extends Application {
         if (ex == null) {
           Log.i("Parse Result", "Successful!");
         } else {
-          Log.i("Parse Result", "Failed" + ex.toString());
+          Log.i("Parse Result", "ERROR(s): " + ex.toString());
         }
       }
     });

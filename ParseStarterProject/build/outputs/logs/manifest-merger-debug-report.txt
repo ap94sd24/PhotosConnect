@@ -9,7 +9,7 @@ MERGED from [com.google.android.gms:play-services-cast-framework:9.4.0] C:\Users
 MERGED from [com.google.android.gms:play-services-cast:9.4.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\e5d52033f5f148aa7996c42eabe002e3\AndroidManifest.xml:16:1-20:12
 MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ee823fbb07a8357d78263921a99cedae\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ba583744fdc0240639fea9f1d3eef227\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ce73901b3b82b0b3cee79a7aaa9b6330\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f48200c32ba32f9ccf67d08f49948757\AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f1e5949783bb65a718e55621a91c8633\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\58d88b4f46a62a3eb8ef575df4cdd0d3\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-ads:9.4.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\20b96613f1ebcbd1fd5fda42086b272d\AndroidManifest.xml:16:1-20:12
@@ -242,7 +242,7 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Adam Pa
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\a8c9687c9e61cd7927b5e86bc9c1df8f\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\a8c9687c9e61cd7927b5e86bc9c1df8f\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from C:\Personal\Temp\parseproject\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\Personal\Temp\parseproject\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:22:9-38
 	android:icon
 		ADDED from C:\Personal\Temp\parseproject\Parse-Server-Starter-Project\ParseStarterProject\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
@@ -281,8 +281,8 @@ MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\Adam Pan\.gradl
 MERGED from [com.android.support:mediarouter-v7:23.0.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ee823fbb07a8357d78263921a99cedae\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ba583744fdc0240639fea9f1d3eef227\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ba583744fdc0240639fea9f1d3eef227\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ce73901b3b82b0b3cee79a7aaa9b6330\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.2] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\ce73901b3b82b0b3cee79a7aaa9b6330\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f48200c32ba32f9ccf67d08f49948757\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f48200c32ba32f9ccf67d08f49948757\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f1e5949783bb65a718e55621a91c8633\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\f1e5949783bb65a718e55621a91c8633\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Adam Pan\.gradle\caches\transforms-2\files-2.1\58d88b4f46a62a3eb8ef575df4cdd0d3\AndroidManifest.xml:20:5-44

@@ -9,6 +9,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/my_gradient_drawable"
@@ -20,7 +21,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logoImageView"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
@@ -31,7 +32,7 @@
         android:id="@+id/userNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_below="@+id/logoImageView"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="username   "
@@ -45,20 +46,34 @@
         android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPersonName" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/signUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwordEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="58dp"
         android:background="@android:color/holo_orange_light"
         android:capitalize="words"
         android:hapticFeedbackEnabled="true"
         android:onClick="signUp"
         android:text="Sign up"
         android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="66dp"
+        android:layout_toEndOf="@+id/signUpBtn"
+        android:layout_toRightOf="@+id/signUpBtn"
+        android:text="or, Login"
+        android:textColor="#1E88E5"
+        android:textSize="18sp" />
 
 </RelativeLayout>

@@ -11,9 +11,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -32,29 +37,79 @@ import com.parse.SignUpCallback;
 import java.util.List;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
 
-  public void  signUp(View view) {
-     EditText usernameEditText = (EditText) findViewById(R.id.userNameEditText);
-     EditText passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+    Boolean signUpModeActive = true;
+    TextView loginTextView;
+    EditText usernameEditText;
+    EditText passwordEditText;
+
+    @Override
+    public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+        if (i == KeyEvent.KEYCODE_ENTER && keyEvent.getAction() == KeyEvent.ACTION_DOWN) {
+            signUp(view);
+        }
+
+        return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.loginTextView ) {
+            Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
+
+            if (signUpModeActive) {
+                signUpModeActive = false;
+                signUpBtn.setText("Login");
+                loginTextView.setText("or, Sign Up");
+            } else {
+                signUpModeActive = true;
+                signUpBtn.setText("Sign up");
+                loginTextView.setText("or, Login");
+            }
+        }
+    }
+
+    public void  signUp(View view) {
 
      if (usernameEditText.getText().toString().matches("")  || passwordEditText.getText().toString().matches("")) {
        Toast.makeText(this, "A username and a password  are required.", Toast.LENGTH_SHORT).show();
      } else {
-         ParseUser user = new ParseUser();
-         user.setUsername(usernameEditText.getText().toString());
-         user.setPassword(passwordEditText.getText().toString());
+         if (signUpModeActive) {
+             Log.i("DEBUG", "SIGN UP MODE");
+             ParseUser user = new ParseUser();
+             user.setUsername(usernameEditText.getText().toString());
+             user.setPassword(passwordEditText.getText().toString());
 
-         user.signUpInBackground(new SignUpCallback() {
-             @Override
-             public void done(ParseException e) {
-                 if (e == null) {
-                     Log.i("Signup", "Success!");
-                 } else {
-                     Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+             user.signUpInBackground(new SignUpCallback() {
+                 @Override
+                 public void done(ParseException e) {
+                     if (e == null) {
+                         Log.i("Sign up", "Success!");
+                     } else {
+                         Log.i("DEBUG", "WTF");
+                         Log.i("DEBUG",  e.getMessage());
+                         Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                     }
                  }
-             }
-         });
+             });
+         } else {
+             // login
+             Log.i("DEBUG", "SIGN IN MODE");
+             ParseUser.logInInBackground(usernameEditText.getText().toString(), passwordEditText.getText().toString(), new LogInCallback() {
+                 @Override
+                 public void done(ParseUser user, ParseException e) {
+                     if (user != null) {
+                         Log.i("Login", "Success!");
+                     } else {
+                         Log.i("DEBUG", "WTF");
+                         Log.i("DEBUG",  e.getMessage());
+                         Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                     }
+                 }
+             });
+         }
      }
 
   }
@@ -64,108 +119,15 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-      /**
-       * Add a class containing some fields to parse
-       */
-    /*ParseObject score = new ParseObject("Score");
-
-    score.put("username", "Joe");
-    score.put("score", 78);
-    score.put("username", "James");
-    score.put("score", 69);
-    score.saveInBackground(new SaveCallback() {
-      @Override
-      public void done(ParseException e) {
-        if (e == null) {
-          Log.i("Success", "We saved the score");
-        } else {
-          e.printStackTrace();
-        }
-      }
-    }); */
-
-      /**
-       * Get an object from parse
-       * Update an object from parse
-       */
-   /* ParseQuery<ParseObject> query = ParseQuery.getQuery("Score");
-    query.getInBackground("GCMKqOq3t1", new GetCallback<ParseObject>() {
-      @Override
-      public void done(ParseObject object, ParseException e) {
-        if (e == null && object != null) {
-
-            object.put("score", 95);
-            object.saveInBackground();
-
-          Log.i("username", object.getString("username"));
-          Log.i("score", Integer.toString(object.getInt("score")));
-        }
-      }
-    }); */
+      loginTextView = (TextView) findViewById(R.id.loginTextView);
+      loginTextView.setOnClickListener(this);
+      usernameEditText = (EditText) findViewById(R.id.userNameEditText);
+      passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+      ImageView logoImageView = (ImageView) findViewById(R.id.logoImageView);
+      RelativeLayout backgroundLayout = (RelativeLayout) findViewById(R.id.backgroundLayout);
 
 
-
-      /**
-       * Get all the objects from parse
-       */
-  /* ParseQuery<ParseObject> query = ParseQuery.getQuery("Score");
-
-   query.whereEqualTo("username", "Adam");
-   query.setLimit(1);
-
-   query.findInBackground(new FindCallback<ParseObject>() {
-       @Override
-       public void done(List<ParseObject> objects, ParseException e) {
-           if (e == null) {
-               if (objects.size() > 0) {
-                   for (ParseObject obj: objects) {
-                       Log.i("username", obj.getString("username"));
-                       Log.i("score", Integer.toString(obj.getInt("score")));
-                   }
-               }
-           }
-       }
-   }); */
-
-      /**
-       * Sign up new user
-       */
- /* ParseUser user = new ParseUser();
-  user.setUsername("nick");
-  user.setPassword("password");
-
-  user.signUpInBackground(new SignUpCallback() {
-      @Override
-      public void done(ParseException e) {
-          if ( e == null) {
-              Log.i("Sign up status", "Success");
-          } else {
-              e.printStackTrace();
-          }
-      }
-  }); */
-
-
-      /**
-       * Login user
-       */
-  /*ParseUser.logInInBackground("nick", "password", new LogInCallback() {
-      @Override
-      public void done(ParseUser user, ParseException e) {
-          if (user != null) {
-              Log.i("Success", "Logged in!");
-          } else {
-              e.printStackTrace();
-          }
-      }
-  }); */
-
-
-
-
-
-
-
+      passwordEditText.setOnKeyListener(this);
     
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
