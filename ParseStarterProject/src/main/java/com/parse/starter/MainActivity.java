@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText usernameEditText;
     EditText passwordEditText;
 
+    public void showUserList() {
+        Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
 
@@ -68,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 signUpBtn.setText("Sign up");
                 loginTextView.setText("or, Login");
             }
+        } else if (view.getId() == R.id.logoImageView || view.getId() == R.id.backgroundLayout) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
 
@@ -77,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        Toast.makeText(this, "A username and a password  are required.", Toast.LENGTH_SHORT).show();
      } else {
          if (signUpModeActive) {
-             Log.i("DEBUG", "SIGN UP MODE");
              ParseUser user = new ParseUser();
              user.setUsername(usernameEditText.getText().toString());
              user.setPassword(passwordEditText.getText().toString());
@@ -87,24 +95,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  public void done(ParseException e) {
                      if (e == null) {
                          Log.i("Sign up", "Success!");
+                         showUserList();
                      } else {
-                         Log.i("DEBUG", "WTF");
-                         Log.i("DEBUG",  e.getMessage());
                          Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                      }
                  }
              });
          } else {
              // login
-             Log.i("DEBUG", "SIGN IN MODE");
              ParseUser.logInInBackground(usernameEditText.getText().toString(), passwordEditText.getText().toString(), new LogInCallback() {
                  @Override
                  public void done(ParseUser user, ParseException e) {
                      if (user != null) {
                          Log.i("Login", "Success!");
+                         showUserList();
                      } else {
-                         Log.i("DEBUG", "WTF");
-                         Log.i("DEBUG",  e.getMessage());
                          Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                      }
                  }
@@ -126,8 +131,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       ImageView logoImageView = (ImageView) findViewById(R.id.logoImageView);
       RelativeLayout backgroundLayout = (RelativeLayout) findViewById(R.id.backgroundLayout);
 
-
+      logoImageView.setOnClickListener(this);
+      backgroundLayout.setOnClickListener(this);
       passwordEditText.setOnKeyListener(this);
+
+      if (ParseUser.getCurrentUser() != null) {
+          showUserList();
+      }
     
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
