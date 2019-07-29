@@ -124,6 +124,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+      setTitle("PhotosConnect");
+
       loginTextView = (TextView) findViewById(R.id.loginTextView);
       loginTextView.setOnClickListener(this);
       usernameEditText = (EditText) findViewById(R.id.userNameEditText);
